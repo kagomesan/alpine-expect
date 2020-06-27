@@ -24,17 +24,22 @@ docker exec expect /work/hoge.exp
 
 6. remove container procedure
 
- *check container status 
+ *check container status
+ 
  docker ps -a
 
  *container stop
+
  docker stop expect
 
  *remove container
+ 
  docker rm [cotainer-ID] or expect
 
  *check images
+ 
  docker images
 
  *remove image
+ 
  docker rmi [image-ID]
