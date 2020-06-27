@@ -1,37 +1,35 @@
 # alpine-expect
 
-# prepare work directroy at host side
+1. prepare work directroy at host side
 mkdir work
 
-# Install
+2. Install
 docker build ./ -t expect_image
 
 docker run -v /docker/expect/work:/work --name expect -it -d --net=host expect_image /bin/sh
 
-# Container login
+3. Container login
 docker exec -it expect /bin/sh
 
-# Run expect-script on host side
-docker exec expect /work/hoge.exp
-
-# First SSH login
+4. First SSH login
 ssh login to remote-host for create key into container.
 
-# remove container procedure
+5. Run expect-script on host side
+docker exec expect /work/hoge.exp
 
-1.check container status 
-docker ps -a
+6. remove container procedure
 
-2.container stop
-docker stop expect
+ \check container status 
+ docker ps -a
 
-3.remove container
-docker rm [cotainer-ID] or expect
+ \container stop
+ docker stop expect
 
-4.check images
-docker images
+ \remove container
+ docker rm [cotainer-ID] or expect
 
-5.remove image
+ \check images
+ docker images
 
-docker rmi [image-ID]
-
+ \remove image
+ docker rmi [image-ID]
