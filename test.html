@@ -1,0 +1,19 @@
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+<body bgcolor="ccccff">
+<h1 id="time"></h1>
+<script type="text/javascript">
+    time();
+    function time(){
+        var now = new Date();
+        document.getElementById("time").innerHTML = now.toLocaleString();
+    }
+    setInterval('time()',1000);
+</script>
+<pre>
+aaaa
+</pre>
+</html>
+
