@@ -18,3 +18,4 @@ expect "
 }
 
 get_forti > /log/forti_$today.txt
+echo -n -e "¥n"
